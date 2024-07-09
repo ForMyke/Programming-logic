@@ -19,12 +19,8 @@ var rangeBitwiseAnd = function (left, right) {
   //Bits completos
   resultado = resultado.padEnd(32, "0");
 
-  return resultado;
-};
-
-const binaryToDecimal = (binaryStr) => {
-  // Convierte la cadena binaria a un número decimal
-  return parseInt(binaryStr, 2);
+  return parseInt(resultado, 2);
+  //pasamos el resultado a decimal
 };
 
 //uso
@@ -34,6 +30,5 @@ let right = 7;
 //uso de la funcion
 let resultado = rangeBitwiseAnd(left, right);
 //decimal
-let decimal = binaryToDecimal(resultado);
 
-console.log(decimal);
+console.log(resultado);
