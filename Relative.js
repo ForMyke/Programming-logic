@@ -3,7 +3,9 @@
  * @return {string[]}
  */
 var findRelativeRanks = function (score) {
+  //Ordenamiento
   let sortedScores = [...score].sort((a, b) => b - a);
+
   let rankMap = {};
 
   for (let i = 0; i < sortedScores.length; i++) {
@@ -17,7 +19,7 @@ var findRelativeRanks = function (score) {
       rankMap[sortedScores[i]] = (i + 1).toString();
     }
   }
-
+  //creacion de un nuevo array
   return score.map((elemento) => rankMap[elemento]);
 };
 
